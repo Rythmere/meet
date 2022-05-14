@@ -64,4 +64,33 @@ describe('<App /> integration', () => {
         expect(AppWrapper.state('events')).toEqual(allEvents);
         AppWrapper.unmount();
       });
+
+      test('App passes "numberOfEvents" state as a prop to NumberOfEvents', () => {
+        const AppWrapper = mount(<App />);
+        const AppNumberOfEventsState = AppWrapper.state('numberOfEvents');
+        expect(AppNumberOfEventsState).not.toEqual(undefined);
+        expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(AppNumberOfEventsState);
+        AppWrapper.unmount();
+    });
+
+    test('render 32 events default', async () => {
+        const AppWrapper = mount(<App />);
+        const NumberOfEventsState = AppWrapper.state('numberOfEvents');
+        const allEvents =await getEvents();
+        const eventsToShow = allEvents.slice(0, NumberOfEventsState);
+        expect(AppWrapper.state('events')).toEqual(eventsToShow);
+        AppWrapper.unmount();
+    });
+
+    test('get number of events matching user input', async () => {
+        const AppWrapper = mount(<App />);
+        const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+        const renderedEvents = 3;
+        await NumberOfEventsWrapper.instance().handleInputChanged({target: {value: renderedEvents},});
+        const allEvents =await getEvents();
+        const eventsToShow = allEvents.slice(0, renderedEvents);
+        expect(AppWrapper.state('events')).toEqual(eventsToShow);
+        expect(AppWrapper.state("events")).toHaveLength(renderedEvents)
+        AppWrapper.unmount();
+    });
 });

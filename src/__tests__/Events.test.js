@@ -58,4 +58,4 @@ describe('<Event /> Component', () => {
         expect(EventWrapper.state('collapsed')).toBe(true);
 
     });
-});
+})
