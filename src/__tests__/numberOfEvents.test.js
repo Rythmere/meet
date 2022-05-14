@@ -20,4 +20,4 @@ describe('<NumberOfEvents /> Component', () => {
         NumberOfEventsWrapper.find('.numberOfEvents').simulate('change', eventObject);
         expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(10);
     });
-})
+});

@@ -9,7 +9,7 @@ describe('<Event /> Component', () => {
         EventWrapper = shallow(<Event event={mockData[1]} />);
     });
     test('render event', () => {
-        expect(EventWrapper.find('.Event')).toHaveLength(1);
+        expect(EventWrapper.find('.event')).toHaveLength(1);
     });
 
     test('render event summarry', () => {
@@ -57,5 +57,5 @@ describe('<Event /> Component', () => {
         EventWrapper.find('.hideDetails').simulate('click');
         expect(EventWrapper.state('collapsed')).toBe(true);
 
-    })
-})
+    });
+});
