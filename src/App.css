@@ -116,7 +116,8 @@ input[type="number"] {
 
 .numberOfEvents {
   width: 200px;
-  margin: 20px auto;
+  height: 50px;
+  margin: 30px auto;
   text-align: center;
 }
 
@@ -129,8 +130,9 @@ input[type="number"] {
 }
 
 .Alert {
-  position: fixed;
-  top: 20px;
+  position: relative;
+  top: 0px;
+  font-size: 12px;
 }
 
 .data-vis-wrapper {
