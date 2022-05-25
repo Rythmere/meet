@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 .App {
   text-align: center;
-  padding: 2% 5%;
+  padding: 1% 5%;
 }
 
 .App * {
@@ -55,14 +55,14 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
+  top: 50px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
 .suggestions > li {
   text-align: left;
-  padding: 8px 6px 8px 10px;
+  padding: 6px 6px 8px 10px;
   background-color: #eee;
   cursor: default;
 }
@@ -93,6 +93,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  background-color: lightgrey;
 }
 
 .name {
@@ -131,8 +132,9 @@ input[type="number"] {
 
 .Alert {
   position: relative;
+  height: 20px;
   top: 0px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .data-vis-wrapper {
