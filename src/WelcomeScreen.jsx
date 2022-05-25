@@ -29,7 +29,7 @@ className="btn-text"
 </div>
 </div>
 <a
-href="https://rythmere.github.io/meet/privacy.html"
+href="https://rythmere.github.io/meet/MeetPrivacyPolicy.html"
 rel="nofollow noopener"
 >
 Privacy policy
